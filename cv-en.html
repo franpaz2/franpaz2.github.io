@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Portfolio | Francisco Isaac Pazmiño Morales</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        ice: {
+                            50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd',
+                            300: '#7dd3fc', 400: '#38bdf8', 500: '#1E90FF',
+                            600: '#0284c7', 700: '#0369a1', 800: '#075985', 900: '#0c4a6e',
+                        },
+                        dark: {
+                            900: '#0a0a0c', 800: '#141417',
+                            700: '#1e1e24', 600: '#2d2d35',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Horizon', 'Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Feather Icons for minimalist SVG icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Custom Scrollbar to match Iceberg Health */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #2d2d35;
+            border-radius: 3px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #1E90FF;
+        }
+    </style>
+</head>
+
+<body class="bg-dark-900 text-white font-sans antialiased min-h-screen selection:bg-ice-500/30">
+
+    <!-- Ambient background glows for that premium tech feel -->
+    <div class="fixed top-0 left-1/4 w-96 h-96 bg-ice-500/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+    <div class="fixed bottom-0 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none -z-10">
+    </div>
+
+    <div class="max-w-4xl mx-auto px-6 py-16 md:py-24 space-y-24">
+
+        <!-- ============================================== -->
+        <!-- HEADER SECTION -->
+        <!-- ============================================== -->
+        <header class="fade-in-up space-y-6" style="animation-delay: 0.1s;">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 md:gap-8">
+                <!-- PHOTO + NAME BLOCK -->
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-6 text-center md:text-left">
+                    <img src="foto_cv.jpeg" alt="Francisco Isaac Pazmiño Morales"
+                        class="w-24 h-24 rounded-full object-cover object-center border-4 border-dark-600 shadow-[0_0_20px_-3px_rgba(34,211,238,0.3)] flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer">
+                    <div>
+                        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-2">
+                            Francisco Isaac Pazmiño Morales
+                        </h1>
+                        <h2 class="text-xl md:text-2xl text-gray-400 font-light mt-1">
+                            <span class="text-ice-500 font-medium">Data Scientist</span> | CEO & Co-Founder en <span
+                                class="text-white whitespace-nowrap">Iceberg Datum</span>
+                        </h2>
+                    </div>
+                </div>
+                <!-- SOCIAL LINKS -->
+                <div class="flex items-center justify-center md:justify-end gap-3 md:gap-4 mt-4 md:mt-0">
+                    <a href="https://github.com/franpaz2"
+                        class="p-2.5 rounded-lg bg-dark-800 border border-dark-600 hover:border-ice-500/50 hover:bg-ice-500/10 transition-all text-gray-400 hover:text-ice-500 group">
+                        <i data-feather="github" class="w-5 h-5"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/francisco-isaac-pazmino-morales-46437036a"
+                        class="p-2.5 rounded-lg bg-dark-800 border border-dark-600 hover:border-ice-500/50 hover:bg-ice-500/10 transition-all text-gray-400 hover:text-ice-500">
+                        <i data-feather="linkedin" class="w-5 h-5"></i>
+                    </a>
+                    <a href="mailto:fpazmino@icebergdatum.com?subject=Oportunidad%20desde%20tu%20Portfolio"
+                        class="p-2.5 rounded-lg bg-dark-800 border border-dark-600 hover:border-ice-500/50 hover:bg-ice-500/10 transition-all text-gray-400 hover:text-ice-500">
+                        <i data-feather="mail" class="w-5 h-5"></i>
+                    </a>
+                    <!-- Language Toggle -->
+                    <div class="h-6 w-px bg-dark-600 mx-1"></div>
+                    <a href="index.html" title="Cambiar a Español"
+                        class="p-2.5 rounded-lg bg-dark-800 border border-dark-600 hover:border-ice-500/50 hover:bg-ice-500/10 transition-all text-ice-500 font-bold text-xs flex items-center justify-center min-w-[36px]">
+                        ES
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- ============================================== -->
+        <!-- ABOUT ME SECTION -->
+        <!-- ============================================== -->
+        <section class="fade-in-up" style="animation-delay: 0.2s;">
+            <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-6 flex items-center gap-3">
+                <span class="w-8 h-[1px] bg-gray-700"></span> About Me
+            </h3>
+            <p class="text-gray-300 text-lg leading-relaxed max-w-3xl">
+                Data Scientist and Co-Founder specialized in the intersection of Artificial Intelligence and business
+                performance. I combine the mathematical rigor of Machine Learning with real-world commercial strategy
+                experience. My approach is not limited to training predictive models; I design technological solutions
+                aimed at optimizing sales, mitigating risks, and generating a measurable impact on the bottom line.
+            </p>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- SKILLS SECTION (Visual Tags) -->
+        <!-- ============================================== -->
+        <section class="fade-in-up" style="animation-delay: 0.3s;">
+            <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-6 flex items-center gap-3">
+                <span class="w-8 h-[1px] bg-gray-700"></span> Tech Stack
+            </h3>
+
+            <div class="flex flex-wrap gap-3">
+                <!-- Data & Core -->
+                <span
+                    class="px-4 py-2 rounded-full text-sm font-medium bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 shadow-[0_0_8px_rgba(6,182,212,0.15)] flex items-center gap-2">
+                    <i data-feather="terminal" class="w-4 h-4"></i> Python
+                </span>
+                <span
+                    class="px-4 py-2 rounded-full text-sm font-medium bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 shadow-[0_0_8px_rgba(6,182,212,0.15)] flex items-center gap-2">
+                    <i data-feather="database" class="w-4 h-4"></i> SQL
+                </span>
+                <span
+                    class="px-4 py-2 rounded-full text-sm font-medium bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 shadow-[0_0_8px_rgba(6,182,212,0.15)] flex items-center gap-2">
+                    <i data-feather="bar-chart-2" class="w-4 h-4"></i> R & Statistics
+                </span>
+                <span
+                    class="px-4 py-2 rounded-full text-sm font-medium bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 shadow-[0_0_8px_rgba(6,182,212,0.15)] flex items-center gap-2">
+                    <i data-feather="database" class="w-4 h-4"></i> MongoDB
+                </span>
+
+                <!-- Artificial Intelligence -->
+                <span
+                    class="px-4 py-2 rounded-full text-sm font-medium bg-indigo-500/10 text-indigo-400 border border-indigo-500/30 shadow-[0_0_8px_rgba(99,102,241,0.15)] flex items-center gap-2">
+                    <i data-feather="cpu" class="w-4 h-4"></i> Machine Learning
+                </span>
+                <span
+                    class="px-4 py-2 rounded-full text-sm font-medium bg-indigo-500/10 text-indigo-400 border border-indigo-500/30 shadow-[0_0_8px_rgba(99,102,241,0.15)] flex items-center gap-2">
+                    <i data-feather="layers" class="w-4 h-4"></i> Deep Learning
+                </span>
+                <span
+                    class="px-4 py-2 rounded-full text-sm font-medium bg-indigo-500/10 text-indigo-400 border border-indigo-500/30 shadow-[0_0_8px_rgba(99,102,241,0.15)] flex items-center gap-2">
+                    <i data-feather="message-square" class="w-4 h-4"></i> NLP
+                </span>
+
+                <!-- Tools, Cloud & Analytics -->
+                <span
+                    class="px-4 py-2 rounded-full text-sm font-medium bg-slate-500/10 text-slate-300 border border-slate-500/30 shadow-[0_0_8px_rgba(148,163,184,0.15)] flex items-center gap-2">
+                    <i data-feather="cloud" class="w-4 h-4"></i> Cloud Architecture
+                </span>
+                <span
+                    class="px-4 py-2 rounded-full text-sm font-medium bg-slate-500/10 text-slate-300 border border-slate-500/30 shadow-[0_0_8px_rgba(148,163,184,0.15)] flex items-center gap-2">
+                    <i data-feather="code" class="w-4 h-4"></i> FastAPI
+                </span>
+                <span
+                    class="px-4 py-2 rounded-full text-sm font-medium bg-slate-500/10 text-slate-300 border border-slate-500/30 shadow-[0_0_8px_rgba(148,163,184,0.15)] flex items-center gap-2">
+                    <i data-feather="git-branch" class="w-4 h-4"></i> Git
+                </span>
+                <span
+                    class="px-4 py-2 rounded-full text-sm font-medium bg-slate-500/10 text-slate-300 border border-slate-500/30 shadow-[0_0_8px_rgba(148,163,184,0.15)] flex items-center gap-2">
+                    <i data-feather="grid" class="w-4 h-4"></i> Excel
+                </span>
+                <span
+                    class="px-4 py-2 rounded-full text-sm font-medium bg-slate-500/10 text-slate-300 border border-slate-500/30 shadow-[0_0_8px_rgba(148,163,184,0.15)] flex items-center gap-2">
+                    <i data-feather="map" class="w-4 h-4"></i> QGIS
+                </span>
+                <span
+                    class="px-4 py-2 rounded-full text-sm font-medium bg-slate-500/10 text-slate-300 border border-slate-500/30 shadow-[0_0_8px_rgba(148,163,184,0.15)] flex items-center gap-2">
+                    <i data-feather="pie-chart" class="w-4 h-4"></i> Power BI
+                </span>
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- SOFT SKILLS SECTION -->
+        <!-- ============================================== -->
+        <section class="fade-in-up" style="animation-delay: 0.35s;">
+            <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-6 flex items-center gap-3">
+                <span class="w-8 h-[1px] bg-gray-700"></span> Soft Skills
+            </h3>
+
+            <div class="flex flex-wrap gap-3">
+                <span
+                    class="px-4 py-2 rounded-full text-sm font-medium bg-dark-800 text-gray-300 border border-dark-600 flex items-center gap-2 hover:border-gray-500 transition-colors cursor-default">
+                    <i data-feather="users" class="w-4 h-4 text-gray-400"></i> Teamwork
+                </span>
+                <span
+                    class="px-4 py-2 rounded-full text-sm font-medium bg-dark-800 text-gray-300 border border-dark-600 flex items-center gap-2 hover:border-gray-500 transition-colors cursor-default">
+                    <i data-feather="star" class="w-4 h-4 text-gray-400"></i> Leadership
+                </span>
+                <span
+                    class="px-4 py-2 rounded-full text-sm font-medium bg-dark-800 text-gray-300 border border-dark-600 flex items-center gap-2 hover:border-gray-500 transition-colors cursor-default">
+                    <i data-feather="mic" class="w-4 h-4 text-gray-400"></i> Effective Communication
+                </span>
+                <span
+                    class="px-4 py-2 rounded-full text-sm font-medium bg-dark-800 text-gray-300 border border-dark-600 flex items-center gap-2 hover:border-gray-500 transition-colors cursor-default">
+                    <i data-feather="tool" class="w-4 h-4 text-gray-400"></i> Problem Solving
+                </span>
+                <span
+                    class="px-4 py-2 rounded-full text-sm font-medium bg-dark-800 text-gray-300 border border-dark-600 flex items-center gap-2 hover:border-gray-500 transition-colors cursor-default">
+                    <i data-feather="check-circle" class="w-4 h-4 text-gray-400"></i> Commitment & Responsibility
+                </span>
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- LANGUAGES SECTION -->
+        <!-- ============================================== -->
+        <section class="fade-in-up" style="animation-delay: 0.4s;">
+            <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-6 flex items-center gap-3">
+                <span class="w-8 h-[1px] bg-gray-700"></span> Languages
+            </h3>
+
+            <div class="flex flex-wrap gap-3">
+                <span
+                    class="px-4 py-2 rounded-full text-sm font-medium bg-dark-800 text-gray-300 border border-dark-600 flex items-center gap-2 hover:border-gray-500 transition-colors cursor-default">
+                    <i data-feather="globe" class="w-4 h-4 text-ice-500"></i> Spanish (Native)
+                </span>
+                <span
+                    class="px-4 py-2 rounded-full text-sm font-medium bg-dark-800 text-gray-300 border border-dark-600 flex items-center gap-2 hover:border-gray-500 transition-colors cursor-default">
+                    <i data-feather="globe" class="w-4 h-4 text-ice-500"></i> English (Advanced)
+                </span>
+                <span
+                    class="px-4 py-2 rounded-full text-sm font-medium bg-dark-800 text-gray-300 border border-dark-600 flex items-center gap-2 hover:border-gray-500 transition-colors cursor-default">
+                    <i data-feather="globe" class="w-4 h-4 text-ice-500"></i> Japanese (Basic-Intermediate)
+                </span>
+                <span
+                    class="px-4 py-2 rounded-full text-sm font-medium bg-dark-800 text-gray-300 border border-dark-600 flex items-center gap-2 hover:border-gray-500 transition-colors cursor-default">
+                    <i data-feather="globe" class="w-4 h-4 text-ice-500"></i> Catalan / Valencian (Intermediate)
+                </span>
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- EXPERIENCE SECTION -->
+        <!-- ============================================== -->
+        <section class="fade-in-up" style="animation-delay: 0.45s;">
+            <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-6 flex items-center gap-3">
+                <span class="w-8 h-[1px] bg-gray-700"></span> Experience
+            </h3>
+
+            <div class="space-y-8">
+                <!-- Job Card 1 -->
+                <div
+                    class="bg-dark-800/80 backdrop-blur-sm rounded-xl border border-dark-600 hover:border-ice-500/30 transition-all p-6 shadow-lg group relative overflow-hidden">
+                    <!-- Glow en el borde izquierdo (Iceberg Accent) -->
+                    <div
+                        class="absolute left-0 top-0 w-1 h-full bg-ice-500 scale-y-0 group-hover:scale-y-100 origin-top transition-transform duration-300">
+                    </div>
+
+                    <div class="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-4">
+                        <div>
+                            <h4 class="text-lg font-bold text-white group-hover:text-ice-400 transition-colors">
+                                Co-Founder & Lead Data Scientist</h4>
+                            <p class="text-gray-400 font-medium text-sm mt-1">Iceberg Datum</p>
+                        </div>
+                        <span
+                            class="px-3 py-1 rounded bg-dark-700 text-xs font-semibold text-gray-300 border border-dark-600 whitespace-nowrap">
+                            2025 — Present
+                        </span>
+                    </div>
+                    <ul class="text-gray-400 text-sm space-y-2 leading-relaxed">
+                        <li class="flex items-start gap-2">
+                            <i data-feather="chevron-right" class="w-4 h-4 text-ice-500 flex-shrink-0 mt-0.5"></i>
+                            Technical leadership and co-founding of a startup focused on developing Artificial
+                            Intelligence-based B2B SaaS solutions for clinical, legal, and automotive sectors.
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-feather="chevron-right" class="w-4 h-4 text-ice-500 flex-shrink-0 mt-0.5"></i>
+                            Development of predictive engines and NLP architectures (Iceberg Health and Iceberg Law)
+                            aimed at clinical risk auditing and legal documentation structuring.
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-feather="chevron-right" class="w-4 h-4 text-ice-500 flex-shrink-0 mt-0.5"></i>
+                            Design and deployment of Machine Learning models (Python, Scikit-learn) for dynamic pricing
+                            strategies, customer segmentation, and commercial optimization.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Job Card 2 -->
+                <div
+                    class="bg-dark-800/80 backdrop-blur-sm rounded-xl border border-dark-600 hover:border-gray-500/50 transition-all p-6 shadow-lg group relative overflow-hidden">
+                    <div
+                        class="absolute left-0 top-0 w-1 h-full bg-gray-500 scale-y-0 group-hover:scale-y-100 origin-top transition-transform duration-300">
+                    </div>
+                    <div class="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-4">
+                        <div>
+                            <h4 class="text-lg font-bold text-white group-hover:text-gray-300 transition-colors">Sales
+                                Advisor & Data Analyst</h4>
+                            <p class="text-gray-400 font-medium text-sm mt-1">ONE A Motorsports (Miami, USA)</p>
+                        </div>
+                        <span
+                            class="px-3 py-1 rounded bg-dark-700 text-xs font-semibold text-gray-300 border border-dark-600 whitespace-nowrap">
+                            June 2024 — September 2024
+                        </span>
+                    </div>
+                    <ul class="text-gray-400 text-sm space-y-2 leading-relaxed">
+                        <li class="flex items-start gap-2">
+                            <i data-feather="chevron-right" class="w-4 h-4 text-gray-500 flex-shrink-0 mt-0.5"></i>
+                            Personalized technical and commercial advice to national and international clients in the
+                            automotive sector.
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-feather="chevron-right" class="w-4 h-4 text-gray-500 flex-shrink-0 mt-0.5"></i>
+                            Strategic decision-making support through the analysis of internal sales and performance
+                            data.
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- EDUCATION SECTION -->
+        <!-- ============================================== -->
+        <section class="fade-in-up" style="animation-delay: 0.5s;">
+            <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-6 flex items-center gap-3">
+                <span class="w-8 h-[1px] bg-gray-700"></span> Education
+            </h3>
+
+            <div class="space-y-8">
+                <!-- Education Card 1 -->
+                <div
+                    class="bg-dark-800/80 backdrop-blur-sm rounded-xl border border-dark-600 hover:border-ice-500/30 transition-all p-6 shadow-lg group relative overflow-hidden">
+                    <div
+                        class="absolute left-0 top-0 w-1 h-full bg-ice-500 scale-y-0 group-hover:scale-y-100 origin-top transition-transform duration-300">
+                    </div>
+
+                    <div class="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-4">
+                        <div>
+                            <h4 class="text-lg font-bold text-white group-hover:text-ice-400 transition-colors">
+                                Bachelor's Degree in Data Science</h4>
+                            <p class="text-gray-400 font-medium text-sm mt-1">University of Valencia – Valencia, Spain
+                            </p>
+                        </div>
+                        <span
+                            class="px-3 py-1 rounded bg-dark-700 text-xs font-semibold text-gray-300 border border-dark-600 whitespace-nowrap">
+                            September 2023 — Present
+                        </span>
+                    </div>
+                    <ul class="text-gray-400 text-sm space-y-2 leading-relaxed">
+                        <li class="flex items-start gap-2">
+                            <i data-feather="book-open" class="w-4 h-4 text-ice-500 flex-shrink-0 mt-0.5"></i>
+                            Advanced training in mathematics, statistics, and Big Data, complemented with a practical
+                            and proactive approach towards Machine Learning, the creation of AI architectures (NLP, Deep
+                            Learning), and the development of B2B tech products.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Education Card 2 -->
+                <div
+                    class="bg-dark-800/80 backdrop-blur-sm rounded-xl border border-dark-600 hover:border-amber-500/30 transition-all p-6 shadow-lg group relative overflow-hidden">
+                    <div
+                        class="absolute left-0 top-0 w-1 h-full bg-amber-500 scale-y-0 group-hover:scale-y-100 origin-top transition-transform duration-300">
+                    </div>
+                    <div class="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-4">
+                        <div>
+                            <h4 class="text-lg font-bold text-white group-hover:text-amber-400 transition-colors">
+                                High School Diploma in Sciences</h4>
+                            <p class="text-gray-400 font-medium text-sm mt-1">U.E.P.B "Computer World" – Quito, Ecuador
+                            </p>
+                        </div>
+                        <span
+                            class="px-3 py-1 rounded bg-dark-700 text-xs font-semibold text-gray-300 border border-dark-600 whitespace-nowrap">
+                            July 2022
+                        </span>
+                    </div>
+                    <ul class="text-gray-400 text-sm space-y-2 leading-relaxed">
+                        <li class="flex items-start gap-2">
+                            <i data-feather="award"
+                                class="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5"></i><span><strong
+                                    class="text-gray-300">Outstanding Achievement:</strong> Valedictorian (highest
+                                recognition awarded to the best student of the graduating class).</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- ============================================== -->
+        <!-- PROJECTS SECTION (Portfolio) -->
+        <!-- ============================================== -->
+        <section class="fade-in-up" style="animation-delay: 0.55s;">
+            <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-6 flex items-center gap-3">
+                <span class="w-8 h-[1px] bg-gray-700"></span> Featured Projects
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Project Card 1: Iceberg Health -->
+                <div
+                    class="bg-dark-800 rounded-xl border border-dark-600 overflow-hidden flex flex-col group hover:-translate-y-1 transition-transform duration-300 shadow-xl">
+                    <div
+                        class="h-32 bg-gradient-to-br from-dark-700 to-dark-900 border-b border-dark-600 flex items-center justify-center p-6 relative overflow-hidden">
+                        <div
+                            class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] opacity-50">
+                        </div>
+                        <i data-feather="activity"
+                            class="w-16 h-16 text-ice-500/50 group-hover:text-ice-400 group-hover:scale-110 transition-all duration-300 relative z-10"></i>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="text-lg font-bold text-white group-hover:text-ice-400 transition-colors">Iceberg
+                                Health</h4>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-2 uppercase tracking-wider font-semibold">Clinical Auditing
+                            SaaS</p>
+                        <p class="text-sm text-gray-400 leading-relaxed mb-4 flex-1">
+                            Identification of risk patterns and adverse drug interaction effects through data mining.
+                        </p>
+                        <div class="flex items-end justify-between mt-auto pt-4 gap-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-[10px] px-2 py-1 rounded bg-dark-700 text-gray-300 border border-dark-600 uppercase tracking-wide font-semibold">PYTHON</span>
+                                <span
+                                    class="text-[10px] px-2 py-1 rounded bg-dark-700 text-gray-300 border border-dark-600 uppercase tracking-wide font-semibold">NLP
+                                    APIS</span>
+                                <span
+                                    class="text-[10px] px-2 py-1 rounded bg-dark-700 text-gray-300 border border-dark-600 uppercase tracking-wide font-semibold">CLOUD
+                                    ARCHITECTURE</span>
+                            </div>
+                            <a href="#"
+                                class="flex items-center gap-1.5 text-xs text-gray-500 hover:text-white transition-colors shrink-0">
+                                View repo <i data-feather="external-link" class="w-3 h-3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2: Iceberg Law -->
+                <div
+                    class="bg-dark-800 rounded-xl border border-dark-600 overflow-hidden flex flex-col group hover:-translate-y-1 transition-transform duration-300 shadow-xl">
+                    <div
+                        class="h-32 bg-gradient-to-br from-dark-700 to-dark-900 border-b border-dark-600 flex items-center justify-center p-6 relative overflow-hidden">
+                        <div
+                            class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] opacity-50">
+                        </div>
+                        <i data-feather="file-text"
+                            class="w-16 h-16 text-cyan-500/50 group-hover:text-cyan-400 group-hover:scale-110 transition-all duration-300 relative z-10"></i>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">Iceberg
+                                Law</h4>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-2 uppercase tracking-wider font-semibold">Legal NLP Engine
+                        </p>
+                        <p class="text-sm text-gray-400 leading-relaxed mb-4 flex-1">
+                            Transformation of unstructured legal documents into actionable databases using Natural
+                            Language Processing.
+                        </p>
+                        <div class="flex items-end justify-between mt-auto pt-4 gap-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-[10px] px-2 py-1 rounded bg-dark-700 text-gray-300 border border-dark-600 uppercase tracking-wide font-semibold">Python</span>
+                                <span
+                                    class="text-[10px] px-2 py-1 rounded bg-dark-700 text-gray-300 border border-dark-600 uppercase tracking-wide font-semibold">NLP</span>
+                                <span
+                                    class="text-[10px] px-2 py-1 rounded bg-dark-700 text-gray-300 border border-dark-600 uppercase tracking-wide font-semibold">Spacy</span>
+                            </div>
+                            <a href="#"
+                                class="flex items-center gap-1.5 text-xs text-gray-500 hover:text-white transition-colors shrink-0">
+                                View repo <i data-feather="external-link" class="w-3 h-3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3: Análisis Biométrico -->
+                <div
+                    class="bg-dark-800 rounded-xl border border-dark-600 overflow-hidden flex flex-col group hover:-translate-y-1 transition-transform duration-300 shadow-xl">
+                    <div
+                        class="h-32 bg-gradient-to-br from-dark-700 to-dark-900 border-b border-dark-600 flex items-center justify-center p-6 relative overflow-hidden">
+                        <div
+                            class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] opacity-50">
+                        </div>
+                        <i data-feather="eye"
+                            class="w-16 h-16 text-teal-500/50 group-hover:text-teal-400 group-hover:scale-110 transition-all duration-300 relative z-10"></i>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="text-lg font-bold text-white group-hover:text-teal-400 transition-colors">
+                                Assisted Oncological Diagnosis</h4>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-2 uppercase tracking-wider font-semibold">Computer Vision</p>
+                        <p class="text-sm text-gray-400 leading-relaxed mb-4 flex-1">
+                            Creation of a Convolutional Neural Network (CNN) for assisted diagnosis and melanoma
+                            detection.
+                        </p>
+                        <div class="flex items-end justify-between mt-auto pt-4 gap-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-[10px] px-2 py-1 rounded bg-dark-700 text-gray-300 border border-dark-600 uppercase tracking-wide font-semibold">TensorFlow</span>
+                                <span
+                                    class="text-[10px] px-2 py-1 rounded bg-dark-700 text-gray-300 border border-dark-600 uppercase tracking-wide font-semibold">CNN</span>
+                                <span
+                                    class="text-[10px] px-2 py-1 rounded bg-dark-700 text-gray-300 border border-dark-600 uppercase tracking-wide font-semibold">Deep
+                                    Learning</span>
+                            </div>
+                            <a href="#"
+                                class="flex items-center gap-1.5 text-xs text-gray-500 hover:text-white transition-colors shrink-0">
+                                View repo <i data-feather="external-link" class="w-3 h-3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 4: Consultoría Estratégica Retail -->
+                <div
+                    class="bg-dark-800 rounded-xl border border-dark-600 overflow-hidden flex flex-col group hover:-translate-y-1 transition-transform duration-300 shadow-xl">
+                    <div
+                        class="h-32 bg-gradient-to-br from-dark-700 to-dark-900 border-b border-dark-600 flex items-center justify-center p-6 relative overflow-hidden">
+                        <div
+                            class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] opacity-50">
+                        </div>
+                        <i data-feather="trending-up"
+                            class="w-16 h-16 text-purple-500/50 group-hover:text-purple-400 group-hover:scale-110 transition-all duration-300 relative z-10"></i>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="text-lg font-bold text-white group-hover:text-purple-400 transition-colors">
+                                Business Analytics (Retail)</h4>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-2 uppercase tracking-wider font-semibold">Strategic
+                            Consulting</p>
+                        <p class="text-sm text-gray-400 leading-relaxed mb-4 flex-1">
+                            Quantitative analysis and data storytelling to assess feasibility and reduce uncertainty in
+                            opening a new business.
+                        </p>
+                        <div class="flex items-end justify-between mt-auto pt-4 gap-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-[10px] px-2 py-1 rounded bg-dark-700 text-gray-300 border border-dark-600 uppercase tracking-wide font-semibold">Data
+                                    Storytelling</span>
+                                <span
+                                    class="text-[10px] px-2 py-1 rounded bg-dark-700 text-gray-300 border border-dark-600 uppercase tracking-wide font-semibold">Statistics</span>
+                                <span
+                                    class="text-[10px] px-2 py-1 rounded bg-dark-700 text-gray-300 border border-dark-600 uppercase tracking-wide font-semibold">BUSINESS
+                                    ANALYTICS</span>
+                            </div>
+                            <a href="#"
+                                class="flex items-center gap-1.5 text-xs text-gray-500 hover:text-white transition-colors shrink-0">
+                                View repo <i data-feather="external-link" class="w-3 h-3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 5: Location Intelligence -->
+                <div
+                    class="bg-dark-800 rounded-xl border border-dark-600 overflow-hidden flex flex-col group hover:-translate-y-1 transition-transform duration-300 shadow-xl md:col-span-2">
+                    <div
+                        class="h-32 bg-gradient-to-br from-dark-700 to-dark-900 border-b border-dark-600 flex items-center justify-center p-6 relative overflow-hidden">
+                        <div
+                            class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] opacity-50">
+                        </div>
+                        <i data-feather="map"
+                            class="w-16 h-16 text-rose-500/50 group-hover:text-rose-400 group-hover:scale-110 transition-all duration-300 relative z-10"></i>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="text-lg font-bold text-white group-hover:text-rose-400 transition-colors">
+                                Location Intelligence</h4>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-2 uppercase tracking-wider font-semibold">CRISIS MANAGEMENT
+                        </p>
+                        <p class="text-sm text-gray-400 leading-relaxed mb-4 flex-1">
+                            Exploratory analysis and visual storytelling of geospatial data (QGIS) to assess the impact
+                            and evolution of the DANA storm in the Valencian Community.
+                        </p>
+                        <div class="flex items-end justify-between mt-auto pt-4 gap-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-[10px] px-2 py-1 rounded bg-dark-700 text-gray-300 border border-dark-600 uppercase tracking-wide font-semibold">QGIS</span>
+                                <span
+                                    class="text-[10px] px-2 py-1 rounded bg-dark-700 text-gray-300 border border-dark-600 uppercase tracking-wide font-semibold">SPATIAL
+                                    ANALYSIS</span>
+                                <span
+                                    class="text-[10px] px-2 py-1 rounded bg-dark-700 text-gray-300 border border-dark-600 uppercase tracking-wide font-semibold">DATA
+                                    STORYTELLING</span>
+                            </div>
+                            <a href="#"
+                                class="flex items-center gap-1.5 text-xs text-gray-500 hover:text-white transition-colors shrink-0">
+                                View repo <i data-feather="external-link" class="w-3 h-3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- FOOTER -->
+        <!-- ============================================== -->
+        <footer
+            class="fade-in-up border-t border-dark-600 pt-8 pb-12 flex flex-col md:flex-row justify-between items-center gap-4"
+            style="animation-delay: 0.6s;">
+            <p class="text-gray-500 text-sm">
+                ©
+                <script>document.write(new Date().getFullYear())</script> Francisco Isaac Pazmiño Morales.
+            </p>
+            <div class="flex items-center gap-2 text-sm text-gray-500 font-semibold tracking-widest uppercase">
+                <span class="text-ice-500 opacity-90">Iceberg Datum</span>
+                <img src="favicon.png" alt="Iceberg Datum Logo"
+                    class="w-4 h-4 opacity-70 grayscale hover:grayscale-0 transition-all duration-300">
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Initialize Scripts -->
+    <script>
+        // Start feather icons
+        feather.replace();
+    </script>
+</body>
+
+</html>
